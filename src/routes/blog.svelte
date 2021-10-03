@@ -2,24 +2,22 @@
 	import { loadPage } from '$lib/routing.js';
 
 	export async function load({ fetch }) {
-		return await loadPage('/about.json', { fetch });
+		return await loadPage('/blog.json', { fetch });
 	}
 </script>
 
 <script>
 	import PageLayout from '$lib/layouts/PageLayout.svelte';
-	import StaffMember from '$lib/StaffMember.svelte';
+	import PostSummary from '$lib/PostSummary.svelte';
 
-	export let staffMembers;
+	export let posts;
 	export let pageDetails;
 </script>
 
 <PageLayout pageDetails={pageDetails}>
-	<p>Meet the members of our capable team:</p>
-
-	<ul class="staff-list">
-		{#each staffMembers as staffMember}
-			<StaffMember staffMember={staffMember} />
+	<ol class="post-list">
+		{#each posts as post}
+			<PostSummary post={post} />
 		{/each}
-	</ul>
+	</ol>
 </PageLayout>

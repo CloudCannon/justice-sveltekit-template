@@ -1,6 +1,6 @@
 ---
 title: Real Estate Flipping
-date: 2016-11-11T00:00:00Z
+date: 2020-11-11T00:00:00Z
 tags:
   - Property
 author_staff_member: john-doe

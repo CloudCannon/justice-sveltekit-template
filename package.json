@@ -12,14 +12,12 @@
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1",
-    "svelte": "^3.42.6"
+    "sass": "^1.39.0"
   },
   "type": "module",
   "dependencies": {
+    "svelte": "^3.42.6",
     "gray-matter": "^4.0.3",
     "markdown-it": "^12.2.0"
-  },
-  "devDependencies": {
-    "sass": "^1.39.0"
   }
 }

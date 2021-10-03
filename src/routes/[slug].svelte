@@ -1,31 +1,15 @@
 <script context="module">
-	// export async function load({ page, fetch, stuff }) {
-	export async function load({ stuff }) {
-		console.log('stuff', stuff);
-		return {
-			props: {
-				pageDetails: stuff.pageDetails
-			}
-		};
+	import { loadPage } from '$lib/routing.js';
 
-		// const url = `/${page.params.slug}.json`;
-		// const res = await fetch(url);
-
-		// if (res.ok) {
-		// 	return { props: await res.json() };
-		// }
-
-		// return {
-		// 	status: res.status,
-		// 	error: new Error(`Could not load ${url}`)
-		// };
+	export async function load({ page, fetch }) {
+		return await loadPage(`/${page.params.slug}.json`, { fetch });
 	}
 </script>
 
 <script>
-	import Page from '$lib/Page.svelte';
+	import PageLayout from '$lib/layouts/PageLayout.svelte';
 
 	export let pageDetails = {};
 </script>
 
-<Page pageDetails={pageDetails} />
+<PageLayout pageDetails={pageDetails} />
