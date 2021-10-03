@@ -1,0 +1,25 @@
+{
+  "name": "justice-sveltekit-template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "lint": "eslint --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "eslint": "^7.32.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "svelte": "^3.42.6"
+  },
+  "type": "module",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^12.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.39.0"
+  }
+}
