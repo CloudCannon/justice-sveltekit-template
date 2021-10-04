@@ -9,6 +9,7 @@
     "lint": "eslint --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.20",
     "@sveltejs/kit": "next",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.1",
@@ -16,8 +17,8 @@
   },
   "type": "module",
   "dependencies": {
-    "svelte": "^3.42.6",
     "gray-matter": "^4.0.3",
-    "markdown-it": "^12.2.0"
+    "markdown-it": "^12.2.0",
+    "svelte": "^3.42.6"
   }
 }

@@ -1,38 +1,70 @@
-# create-svelte
+# Justice
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Law firm themed business template for SvelteKit. Browse through a
+[live demo](https://mysterious-shelter.cloudvent.net/). Increase the web presence of a law firm or
+business with this configurable theme.
 
-## Creating a project
+![Justice template screenshot](_screenshot.png)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Justice was made by [CloudCannon](https://cloudcannon.com/).
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+## Features
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+* Contact form
+* Pre-built pages
+* Pre-styled components
+* Blog
+* Post category pages
+* Disqus comments for posts
+* Staff and author system
+* Configurable footer
+* Optimised for editing in [CloudCannon](https://cloudcannon.com/)
+* RSS/Atom feed
+* SEO tags
+* Google Analytics
 
-> Note: the `@next` is temporary
+## Setup
 
-## Developing
+1. Add your site and author details in `content/data/seo.json`.
+2. Add your Google Analytics and Disqus keys to `content/data/site.json`.
+3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/)
+or SvelteKit locally).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Develop
 
-```bash
-npm run dev
+Justice is built with [SvelteKit](https://kit.svelte.dev/).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+~~~bash
+$ npm install
+$ npm run dev -- --open
+~~~
 
-## Building
+## Editing
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Justice is already optimised for adding, updating and removing pages, staff, posts, company details
+and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
-```bash
-npm run build
-```
+### Posts
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+* Add, update or remove a post in the *Posts* collection.
+* The **Staff Author** field links to members in the **Staff** collection.
+* Change the defaults when new posts are created in `content/posts/_defaults.md`.
+
+### Contact Form
+
+* Preconfigured to work with [CloudCannon](https://app.cloudcannon.com/).
+* Sends email to the address listed in company details.
+
+### Staff
+
+* Reused around the site to save multiple editing locations.
+
+### Footer
+
+* Exposed as a data file to give clients better access.
+* Set in the *Data* / *Footer* section.
+
+### Company details
+
+* Reused around the site to save multiple editing locations.
+* Set in the *Data* / *Company* section.

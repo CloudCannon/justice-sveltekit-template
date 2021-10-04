@@ -8,6 +8,8 @@
 
 <svelte:head>
 	<title>{pageDetails.title}</title>
+	<link rel="alternate" type="application/rss+xml" title="{companyData.company_name}" href="/feed.xml" />
+	<link rel="sitemap" type="application/xml" title="{companyData.company_name} - Sitemap" href="/sitemap.xml" />
 </svelte:head>
 
 <header style="background-image: url(/uploads/building.jpg)" class="{pageDetails.large_header ? 'main-hero' : ''}">
