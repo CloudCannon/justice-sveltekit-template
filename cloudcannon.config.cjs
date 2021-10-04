@@ -57,6 +57,7 @@ module.exports = {
 		},
 		data: {
 			path: 'content/data',
+			name: 'Data',
 			output: false
 		}
 	}
