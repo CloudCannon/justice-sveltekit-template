@@ -1,13 +1,17 @@
 <script>
+	import seoData from '../../../content/data/seo.json';
 	import companyData from '../../../content/data/company.json';
 	import footerData from '../../../content/data/footer.json';
 	import Icon from '../Icon.svelte';
 
 	export let pageDetails = {};
+
+	$: title = pageDetails.title ? `${pageDetails.title} | ${seoData.site_title}` : seoData.site_title;
+	$: description = pageDetails.description || seoData.description;
 </script>
 
 <svelte:head>
-	<title>{pageDetails.title}</title>
+	<title>{title}</title>
 	<link rel="alternate" type="application/rss+xml" title="{companyData.company_name}" href="/feed.xml" />
 	<link rel="sitemap" type="application/xml" title="{companyData.company_name} - Sitemap" href="/sitemap.xml" />
 </svelte:head>

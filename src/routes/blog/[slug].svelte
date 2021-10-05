@@ -7,9 +7,10 @@
 </script>
 
 <script>
-	import PageLayout from '$lib/layouts/PageLayout.svelte';
+	import PostLayout from '$lib/layouts/PostLayout.svelte';
 
 	export let pageDetails = {};
+	export let author = {};
 </script>
 
-<PageLayout pageDetails={pageDetails} />
+<PostLayout pageDetails={pageDetails} author={author} />
