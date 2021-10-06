@@ -31,16 +31,15 @@ module.exports = {
 	paths: {
 		collections: 'content',
 		data: 'content/data',
-		static: 'public',
-		uploads: 'public/uploads'
+		static: 'static',
+		uploads: 'static/uploads'
 	},
 
 	'collections-config': {
-		webpages: {
+		pages: {
 			path: 'content/pages',
 			url: '/[slug]',
 			output: true,
-			name: 'Pages',
 			_icon: 'wysiwyg',
 			_enabled_editors: ['visual', 'data']
 		},

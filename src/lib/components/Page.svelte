@@ -6,6 +6,7 @@
 	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
 	import CallToAction from '$lib/components/CallToAction.svelte';
+	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte';
 
 	export let pageDetails = {};
 
@@ -33,6 +34,8 @@
 		images: images
 	}}
 />
+
+<GoogleAnalytics />
 
 <svelte:head>
 	<link rel="alternate" type="application/rss+xml" title="{companyData.company_name}" href="/feed.xml" />
