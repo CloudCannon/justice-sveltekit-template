@@ -1,5 +1,6 @@
 ---
 title: Real Estate Flipping
+description:
 date: 2020-11-11T00:00:00Z
 tags:
   - Property

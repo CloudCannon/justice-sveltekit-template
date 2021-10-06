@@ -1,4 +1,5 @@
 <script>
+	import '$lib/styles/main.scss';
 	import companyData from '@content/data/company.json';
 	import footerData from '@content/data/footer.json';
 	import Icon from '$lib/components/Icon.svelte';
@@ -17,7 +18,7 @@
 
 					{#each column.links as link}
 						<li>
-							<a href="{link.link}" target="{link.new_window ? '_blank' : '_self'}">
+							<a href="{link.url}" target="{link.new_window ? '_blank' : '_self'}">
 								{#if link.social_icon}
 									<Icon icon={link.social_icon} />
 								{/if}

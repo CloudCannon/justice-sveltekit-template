@@ -1,6 +1,9 @@
 <script>
+	import SvelteSeo from 'svelte-seo';
+	import siteData from '@content/data/site.json';
 	import seoData from '@content/data/seo.json';
 	import companyData from '@content/data/company.json';
+	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
 	import CallToAction from '$lib/components/CallToAction.svelte';
 
@@ -8,10 +11,30 @@
 
 	$: title = pageDetails.title ? `${pageDetails.title} | ${seoData.site_title}` : seoData.site_title;
 	$: description = pageDetails.description || seoData.description;
+	$: canonical = `${siteData.url}/${$page.path}`.replace(/\/+/g, '/');
+
+	const images = seoData.images.map((image) => ({
+		url: image.image,
+		width: image.height,
+		height: image.width,
+		alt: image.description
+	}));
 </script>
 
+<SvelteSeo
+	title={title}
+	canonical={canonical}
+	description={description}
+	openGraph={{
+		site_name: seoData.site_name,
+		url: siteData.url,
+		title: title,
+		description: description,
+		images: images
+	}}
+/>
+
 <svelte:head>
-	<title>{title}</title>
 	<link rel="alternate" type="application/rss+xml" title="{companyData.company_name}" href="/feed.xml" />
 	<link rel="sitemap" type="application/xml" title="{companyData.company_name} - Sitemap" href="/sitemap.xml" />
 </svelte:head>

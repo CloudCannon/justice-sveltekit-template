@@ -1,20 +1,12 @@
 <script>
-	export let pageDetails = {};
+	import { page } from '$app/stores';
+	import { links } from '@content/data/navigation.json'
 </script>
 
 <nav>
 	<ul>
-		<li>
-			<a href="/about" class="{pageDetails.slug === 'about' ? 'active' : ''}">About</a>
-		</li>
-		<li>
-			<a href="/services" class="{pageDetails.slug === 'services' ? 'active' : ''}">Services</a>
-		</li>
-		<li>
-			<a href="/contact" class="{pageDetails.slug === 'contact' ? 'active' : ''}">Contact</a>
-		</li>
-		<li>
-			<a href="/blog" class="{pageDetails.slug === 'blog' ? 'active' : ''}">Blog</a>
-		</li>
+		{#each links as link}
+			<li><a class="{$page.path === link.url ? 'active' : ''}" href="{link.url}">{link.name}</a></li>
+		{/each}
 	</ul>
 </nav>

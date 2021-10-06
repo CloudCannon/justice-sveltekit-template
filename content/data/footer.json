@@ -4,23 +4,23 @@
 		"links": [
 			{
 				"name": "Home",
-				"link": "/"
+				"url": "/"
 			},
 			{
 				"name": "About",
-				"link": "/about"
+				"url": "/about"
 			},
 			{
 				"name": "Services",
-				"link": "/services"
+				"url": "/services"
 			},
 			{
 				"name": "Contact",
-				"link": "/contact"
+				"url": "/contact"
 			},
 			{
 				"name": "Blog",
-				"link": "/blog"
+				"url": "/blog"
 			}
 		]
 	},
@@ -29,25 +29,25 @@
 		"links": [
 			{
 				"name": "Facebook",
-				"link": "https://facebook.com/",
+				"url": "https://facebook.com/",
 				"social_icon": "Facebook",
 				"new_window": true
 			},
 			{
 				"name": "Twitter",
-				"link": "https://twitter.com/",
+				"url": "https://twitter.com/",
 				"social_icon": "Twitter",
 				"new_window": true
 			},
 			{
 				"name": "Instagram",
-				"link": "https://instagram.com/",
+				"url": "https://instagram.com/",
 				"social_icon": "Instagram",
 				"new_window": true
 			},
 			{
 				"name": "LinkedIn",
-				"link": "https://linkedin.com/",
+				"url": "https://linkedin.com/",
 				"social_icon": "LinkedIn",
 				"new_window": true
 			}
