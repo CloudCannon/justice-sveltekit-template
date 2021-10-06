@@ -54,7 +54,11 @@
 
 		<article class="content">
 			<slot name="content-start" />
-			<div>{@html pageDetails.content_html}</div>
+
+			{#if pageDetails.content_html}
+				<div>{@html pageDetails.content_html}</div>
+			{/if}
+
 			<slot />
 		</article>
 	</div>
