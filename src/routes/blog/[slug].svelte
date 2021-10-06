@@ -25,8 +25,4 @@
 			<StaffMember staffMember={author} />
 		</ul>
 	{/if}
-
-	{#if siteData.disqus_shortname}
-		<h2>Have your say</h2>
-	{/if}
 </Page>

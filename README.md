@@ -15,7 +15,6 @@ Justice was made by [CloudCannon](https://cloudcannon.com/).
 * Pre-styled components
 * Blog
 * Post category pages
-* Disqus comments for posts
 * Staff and author system
 * Configurable footer
 * Optimised for editing in [CloudCannon](https://cloudcannon.com/)
@@ -26,7 +25,7 @@ Justice was made by [CloudCannon](https://cloudcannon.com/).
 ## Setup
 
 1. Add your site and author details in `content/data/seo.json`.
-2. Add your Google Analytics and Disqus keys to `content/data/site.json`.
+2. Add your Google Analytics key to `content/data/site.json`.
 3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/)
 or SvelteKit locally).
 
