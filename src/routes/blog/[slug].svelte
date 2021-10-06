@@ -7,10 +7,21 @@
 </script>
 
 <script>
-	import PostLayout from '$lib/layouts/PostLayout.svelte';
+	import Page from '$lib/components/Page.svelte';
+	import PostSummaryDetails from '$lib/components/PostSummaryDetails.svelte';
+	import StaffMember from '$lib/components/StaffMember.svelte';
 
 	export let pageDetails = {};
 	export let author = {};
 </script>
 
-<PostLayout pageDetails={pageDetails} author={author} />
+<Page pageDetails={pageDetails}>
+	<PostSummaryDetails post={pageDetails} slot="content-start" />
+
+	{#if author}
+		<h2>Meet the author</h2>
+		<ul class="post-author staff-list">
+			<StaffMember staffMember={author} />
+		</ul>
+	{/if}
+</Page>

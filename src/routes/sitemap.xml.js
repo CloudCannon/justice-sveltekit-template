@@ -1,5 +1,5 @@
 import { getCollection } from '$lib/collections.js';
-import siteData from '../../content/data/site.json';
+import siteData from '@content/data/site.json';
 
 const render = (posts, pages) => {
 	const now = new Date();

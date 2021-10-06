@@ -1,6 +1,6 @@
 import { getCollection } from '$lib/collections.js';
-import siteData from '../../content/data/site.json';
-import seoData from '../../content/data/seo.json';
+import siteData from '@content/data/site.json';
+import seoData from '@content/data/seo.json';
 
 const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/"

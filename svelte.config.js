@@ -1,10 +1,17 @@
 import adapter from '@sveltejs/adapter-static';
+import { resolve } from 'path';
 
 const config = {
 	kit: {
 		adapter: adapter(),
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
+		target: '#svelte',
+		vite: {
+			resolve: {
+				alias: {
+					'@content': resolve('./content')
+				}
+			}
+		}
 	}
 };
 

@@ -7,8 +7,8 @@
 </script>
 
 <script>
-	import companyData from '../../content/data/company.json';
-	import PageLayout from '$lib/layouts/PageLayout.svelte';
+	import companyData from '@content/data/company.json';
+	import Page from '$lib/components/Page.svelte';
 
 	export let pageDetails;
 
@@ -16,7 +16,7 @@
 	$: address = companyData.address.replace(/,/g, '<br>');
 </script>
 
-<PageLayout pageDetails={pageDetails}>
+<Page pageDetails={pageDetails}>
 	<div class="columns">
 		<div class="column">
 			<p class="editor-link"><a href="cloudcannon:collections/content/data/company.json" class="btn"><strong>&#9998;</strong> Update Company Details</a></p>
@@ -56,4 +56,4 @@
 			</form>
 		</div>
 	</div>
-</PageLayout>
+</Page>

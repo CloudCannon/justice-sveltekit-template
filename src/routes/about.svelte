@@ -7,14 +7,14 @@
 </script>
 
 <script>
-	import PageLayout from '$lib/layouts/PageLayout.svelte';
-	import StaffMember from '$lib/StaffMember.svelte';
+	import Page from '$lib/components/Page.svelte';
+	import StaffMember from '$lib/components/StaffMember.svelte';
 
 	export let staffMembers;
 	export let pageDetails;
 </script>
 
-<PageLayout pageDetails={pageDetails}>
+<Page pageDetails={pageDetails}>
 	<p>Meet the members of our capable team:</p>
 
 	<ul class="staff-list">
@@ -22,4 +22,4 @@
 			<StaffMember staffMember={staffMember} />
 		{/each}
 	</ul>
-</PageLayout>
+</Page>

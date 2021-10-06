@@ -7,17 +7,17 @@
 </script>
 
 <script>
-	import PageLayout from '$lib/layouts/PageLayout.svelte';
-	import PostSummary from '$lib/PostSummary.svelte';
+	import Page from '$lib/components/Page.svelte';
+	import PostSummary from '$lib/components/PostSummary.svelte';
 
 	export let posts;
 	export let pageDetails;
 </script>
 
-<PageLayout pageDetails={pageDetails}>
+<Page pageDetails={pageDetails}>
 	<ol class="post-list">
 		{#each posts as post}
 			<PostSummary post={post} />
 		{/each}
 	</ol>
-</PageLayout>
+</Page>

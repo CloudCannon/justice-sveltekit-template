@@ -1,5 +1,5 @@
 <script>
-	import companyData from '../../content/data/company.json';
+	import companyData from '@content/data/company.json';
 
 	export let staffMember = {};
 </script>

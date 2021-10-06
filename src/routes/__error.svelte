@@ -7,9 +7,9 @@
 </script>
 
 <script>
-	import PageLayout from '$lib/layouts/PageLayout.svelte';
+	import Page from '$lib/components/Page.svelte';
 
 	export let pageDetails;
 </script>
 
-<PageLayout pageDetails={pageDetails} />
+<Page pageDetails={pageDetails} />
