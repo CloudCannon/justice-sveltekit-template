@@ -8,12 +8,22 @@
 </script>
 
 <script>
+	import { onDestroy, onMount } from 'svelte';
+ 	import { onCloudCannonChanges, stopCloudCannonChanges } from 'cloudcannon@svelte-connector';
 	import Page from '$lib/components/Page.svelte';
 	import PostSummaryDetails from '$lib/components/PostSummaryDetails.svelte';
 	import StaffMember from '$lib/components/StaffMember.svelte';
 
 	export let pageDetails = {};
 	export let author = {};
+
+	onMount(async () => {
+   		onCloudCannonChanges((newProps) => pageDetails = newProps);
+ 	});
+
+ 	onDestroy(async () => {
+  		stopCloudCannonChanges();
+ 	});
 </script>
 
 <Page pageDetails={pageDetails}>

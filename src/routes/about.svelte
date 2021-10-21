@@ -7,11 +7,21 @@
 </script>
 
 <script>
+	import { onDestroy, onMount } from 'svelte';
+ 	import { onCloudCannonChanges, stopCloudCannonChanges } from 'cloudcannon@svelte-connector';
 	import Page from '$lib/components/Page.svelte';
 	import StaffMember from '$lib/components/StaffMember.svelte';
 
 	export let staffMembers;
 	export let pageDetails;
+
+	onMount(async () => {
+   		onCloudCannonChanges((newProps) => pageDetails = newProps);
+ 	});
+
+ 	onDestroy(async () => {
+  		stopCloudCannonChanges();
+ 	});
 </script>
 
 <Page pageDetails={pageDetails}>

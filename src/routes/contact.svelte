@@ -7,10 +7,20 @@
 </script>
 
 <script>
+	import { onDestroy, onMount } from 'svelte';
+	import { onCloudCannonChanges, stopCloudCannonChanges } from 'cloudcannon@svelte-connector';
 	import companyData from '@content/data/company.json';
 	import Page from '$lib/components/Page.svelte';
 
 	export let pageDetails;
+
+	onMount(async () => {
+   		onCloudCannonChanges((newProps) => pageDetails = newProps);
+ 	});
+
+ 	onDestroy(async () => {
+  		stopCloudCannonChanges();
+ 	});
 
 	$: postalAddress = companyData.postal_address.replace(/,/g, '<br>');
 	$: address = companyData.address.replace(/,/g, '<br>');
