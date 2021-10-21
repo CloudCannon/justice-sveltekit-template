@@ -8,7 +8,7 @@
 
 <script>
 	import { onDestroy, onMount } from 'svelte';
- 	import { onCloudCannonChanges, stopCloudCannonChanges } from 'cloudcannon@svelte-connector';
+ 	import { onCloudCannonChanges, stopCloudCannonChanges } from '@cloudcannon/svelte-connector';
 	import Page from '$lib/components/Page.svelte';
 	import PostSummary from '$lib/components/PostSummary.svelte';
 
