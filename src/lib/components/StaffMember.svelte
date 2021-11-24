@@ -17,7 +17,7 @@
 			<li>{staffMember.name}</li>
 			<li><small>{staffMember.credentials}</small></li>
 			<li>
-				<a href={`tel:${companyData.contact_phone_number}`}>{companyData.contact_phone_number}</a> ext {staffMember.phone_extension}
+				<a href={`tel:${companyData.phone}`}>{companyData.phone}</a> ext {staffMember.phone_extension}
 			</li>
 		</ul>
 	</div>
