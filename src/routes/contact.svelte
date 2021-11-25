@@ -33,7 +33,7 @@
 
 			<label for="phone-number">Phone Number</label>
 			<p id="phone-number" class="contact-info">
-				<a href="tel:{companyData.contact_phone_number}">{companyData.contact_phone_number}</a>
+				<a href="tel:{companyData.phone}">{companyData.phone}</a>
 			</p>
 
 			<label for="email-address">Email Address</label>
