@@ -1,1 +1,13 @@
-{"ssg":"sveltekit","build_configuration":{}}
+{ 
+    "ssg": "sveltekit",
+    "build_configuration": {
+      "install_command": "",
+      "build_command": "",
+      "output_path": "build",
+      "preserved_paths": "",
+      "preserveOutput": false,
+      "includeGit": false,
+      "use_beta_plugin": false,
+      "environment_variables": []
+    } 
+}
