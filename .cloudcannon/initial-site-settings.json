@@ -1,0 +1,10 @@
+{
+  "ssg": "sveltekit",
+  "build_configuration": {
+    "preserved_paths": "",
+    "environment_variables": [],
+    "install_command": "",
+    "build_command": "",
+    "output_path": "build"
+  }
+}
