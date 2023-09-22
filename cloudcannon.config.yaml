@@ -40,7 +40,7 @@ _inputs:
     comment: Address for the contact form to send to.
   new_window:
     comment: Whether the link opens a new browser tab/window.
-  call_to_actions:
+  call_to_action:
     type: select
     options:
       values:
