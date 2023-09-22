@@ -46,7 +46,7 @@ _inputs:
       values:
         - Contact
         - Blog
-  social_icons:
+  social_icon:
     type: select
     options:
       values:
